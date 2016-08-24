@@ -1,0 +1,23 @@
+{
+  "name": "haohong725/laravel-ucloud-queue",
+  "description": "Laravel queue connector, using the ucloud queue",
+  "keywords": ["laravel", "ucloud", "queue"],
+  "authors": [
+    {
+      "name": "Hao Hong",
+      "email": "haohong725@qq.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Umq\\": "src/"
+    }
+  },
+  "license": "MIT",
+  "require": {
+    "php": ">=5.4",
+    "illuminate/queue": "~5.0",
+    "illuminate/support": "~5.0",
+    "illuminate/contracts": "~5.0"
+  }
+}
