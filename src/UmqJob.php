@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Umq;
 
 use Illuminate\Queue\Jobs\Job;
 use Illuminate\Contracts\Queue\Job as JobContract;

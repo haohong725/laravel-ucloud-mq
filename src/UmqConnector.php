@@ -1,18 +1,19 @@
 <?php
 
-namespace App\Providers;
+namespace Umq;
 
 use Illuminate\Queue\Connectors\ConnectorInterface;
+use Umq\Umq\UmqClient;
 
 class UmqConnector implements ConnectorInterface
 {
     public function connect(array $config)
     {
-        return new UmqQueue( $this->createConnection( $config ), $config );
+        return new UmqQueue($this->getUmqClient($config));
     }
 
-    public function createConnection(array $config)
+    public function getUmqClient($config)
     {
-
+        return new UmqClient($config);
     }
 }

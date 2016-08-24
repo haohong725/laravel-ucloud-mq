@@ -1,15 +1,36 @@
 <?php
 
-namespace App\Providers;
+namespace Umq;
 
 use Illuminate\Queue\Queue;
 use Illuminate\Contracts\Queue\Queue as QueueContract;
+use Umq\Umq\UmqClient;
 
 class UmqQueue extends Queue implements QueueContract
 {
+    /**
+     * The ucloud queue instance.
+     *
+     * @var Umq\UmqClient
+     */
+    protected $umq;
+
+    /**
+     * Create a new Amazon SQS queue instance.
+     *
+     * @param  \Aws\Sqs\SqsClient  $sqs
+     * @param  string  $default
+     * @param  string  $prefix
+     * @return void
+     */
+    public function __construct(UmqClient $umq)
+    {
+        $this->umq = $umq;
+    }
+
     public function push($job, $data = '', $queue = null)
     {
-        // TODO: Implement push() method.
+
     }
 
     public function pushRaw($payload, $queue = null, array $options = [])

@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Providers;
+namespace Umq;
 
 use Illuminate\Queue\QueueManager;
+use Illuminate\Support\ServiceProvider;
 
 class UmqServiceProvider extends ServiceProvider
 {
@@ -16,7 +17,9 @@ class UmqServiceProvider extends ServiceProvider
         });
 
         $queue = $manager->connection('umq');
-        $queue->push('222');
+
+        $queue->push('444');
+
         dd(33);
     }
 }
