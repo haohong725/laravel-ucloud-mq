@@ -1,6 +1,6 @@
 <?php
 
-namespace Umq\Umq;
+namespace Umq\SDK;
 
 class UmqClient
 {

@@ -4,14 +4,14 @@ namespace Umq;
 
 use Illuminate\Queue\Queue;
 use Illuminate\Contracts\Queue\Queue as QueueContract;
-use Umq\Umq\UmqClient;
+use Umq\SDK\UmqClient;
 
 class UmqQueue extends Queue implements QueueContract
 {
     /**
      * The ucloud queue instance.
      *
-     * @var Umq\UmqClient
+     * @var SDK\UmqClient
      */
     protected $umq;
 

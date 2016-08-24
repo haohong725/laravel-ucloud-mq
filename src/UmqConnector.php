@@ -3,7 +3,7 @@
 namespace Umq;
 
 use Illuminate\Queue\Connectors\ConnectorInterface;
-use Umq\Umq\UmqClient;
+use Umq\SDK\UmqClient;
 
 class UmqConnector implements ConnectorInterface
 {
